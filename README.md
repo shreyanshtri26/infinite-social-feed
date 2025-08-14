@@ -344,40 +344,6 @@ maxmemory-policy allkeys-lru
 save 900 1
 ```
 
-## 🧪 Testing
-
-### Run Tests
-```bash
-# Unit tests
-npm test
-
-# Integration tests
-npm run test:integration
-
-# Test coverage
-npm run test:coverage
-
-# Watch mode
-npm run test:watch
-```
-
-### Test Structure
-```
-tests/
-├── unit/
-│   ├── services/
-│   │   ├── rankingService.test.js
-│   │   └── personalizationService.test.js
-│   └── controllers/
-│       ├── authController.test.js
-│       └── postController.test.js
-└── integration/
-    └── api/
-        ├── auth.test.js
-        ├── posts.test.js
-        └── feed.test.js
-```
-
 ## 📊 Performance & Scalability
 
 ### Database Optimization
@@ -431,37 +397,6 @@ tests/
 - **Content Security Policy**: XSS attack prevention
 - **HTTPS Enforcement**: SSL/TLS in production
 
-## 🚀 Deployment
-
-### Production Deployment
-
-#### Using Docker (Recommended)
-```bash
-# Build production image
-docker build -t infinite-social-feed:latest .
-
-# Run with docker-compose
-docker-compose -f docker-compose.prod.yml up -d
-```
-
-#### Manual Deployment
-```bash
-# Install PM2 globally
-npm install -g pm2
-
-# Start application with PM2
-pm2 start ecosystem.config.js
-
-# Monitor application
-pm2 monitor
-```
-
-#### Cloud Deployment Options
-1. **AWS**: ECS, Elastic Beanstalk, or EC2
-2. **Google Cloud**: Cloud Run, GKE, or Compute Engine  
-3. **Azure**: Container Instances or App Service
-4. **Digital Ocean**: App Platform or Droplets
-5. **Heroku**: Easy deployment with add-ons
 
 ### Environment Setup
 ```bash
@@ -470,7 +405,8 @@ NODE_ENV=production
 PORT=3000
 
 # Use MongoDB Atlas or managed MongoDB
-MONGODB_URI=mongodb+srv://user:pass@cluster.mongodb.net/dbname
+MONGODB_URI=mongodb+srv://user:pass@cluster.mongodb.net/dbname 
+//user will be your username and pass replace with your password
 
 # Use Redis Cloud or managed Redis
 REDIS_HOST=your-redis-host
@@ -511,30 +447,7 @@ GET /api/admin/cache/stats
 - **Cache Hit Rates**: Redis performance metrics
 
 
-
-## 🤝 Contributing
-
-### Development Setup
-1. Fork the repository
-2. Create feature branch: `git checkout -b feature/amazing-feature`
-3. Commit changes: `git commit -m 'Add amazing feature'`
-4. Push to branch: `git push origin feature/amazing-feature`
-5. Open Pull Request
-
-### Code Standards
-- **ESLint**: Follow configured linting rules
-- **Testing**: Add tests for new features
-- **Documentation**: Update documentation for API changes
-- **Commit Messages**: Use conventional commit format
-
-### Issue Reporting
-- Use GitHub Issues for bug reports
-- Include reproduction steps
-- Specify environment details
-- Attach relevant logs
-
-
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - Express.js team for the robust web framework
 - MongoDB team for the scalable database solution
